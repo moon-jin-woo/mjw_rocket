@@ -6,32 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,
      minimum-scale=1, maximum-scale=1, user-scalable=yes">
     <style media="screen">
-    h1 {
-      text-align: center;
-      border-bottom: 2px solid white;
-    }
     a {
       color: white;
-      text-decoration: none;
+      text-decoration:none;
+      padding-left, right: 10px;
     }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      padding-top: 10px;
+    }
+
+    .ob_links {
+      list-style: none;
+    }
+
+    .ob_links li{
+      display: inline-block;
+      padding: 0px 20px;
+    }
+
+    .ob_links li a{
+      transition: all 0.3s ease 0s:
+    }
+
+    .ob_links li a:hover {
+      color: #00E6FF
+    }
+
+    button {
+      padding: 9px 25px;
+      background-color: rgba(255, 119, 0, 1);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s:
+    }
+
+    button:hover {
+      background-color: rgba(255, 119, 0, 0.95);
+    }
+
     bon {
       display: block;
       font-size: 20px;
       margin: 20px;
     }
-    h3 {
+
+    h4 {
       display: block;
       font-size: 30px;
       margin: 20px;
     }
     </style>
   </head>
-  <body style="background-color:black;color:white;">
-    <h1><a href="index.html">문진우 로켓</a></h1>
-    <h3>G-YEON-a</h3>
-    <bon>G-YEON-a(오복계획 1단 발사체)은 오복계획의 1번째 로켓입니다.
-     발사체는 총 1단으로 구성되어 있으며 1단에는 A3-4T 3개를 사용하여
-    총 20.4N의 추력을 낼 수 있었습니다. 그러나 1차발사 이후, 위험성이 높다고 판단하여
-    본 로켓계획을 취소하고 G-YEON-b를 수립하였습니다.</bon>
- </body>
+  <body style="background-color:#222222; color:white;">
+    <header>
+      <h3><a href="index.html">문진우 로켓</a></h3>
+      <ob>
+        <ul class="ob_links">
+          <li><a href="지연알파.html">G-YEON-a</a></li>
+          <li><a href="지연베타.html">G-YEON-b</a></li>
+        </ul>
+      </ob>
+      <a href="지연베타.html"><button>가장 최근 로켓</button></a>
+    </header>
+  <h4>G-YEON-a</h4>
+  <bon>G-YEON-a(오복계획 1단 발사체)은 오복계획의 1번째 로켓입니다.
+   발사체는 총 1단으로 구성되어 있으며 1단에는 A3-4T 3개를 사용하여
+   총 20.4N의 추력을 낼 수 있었습니다. 그러나 1차발사 이후, 위험성이 높다고 판단하여
+   본 로켓계획을 취소하고 G-YEON-b를 수립하였습니다.</bon>
+  </body>
 </html>
