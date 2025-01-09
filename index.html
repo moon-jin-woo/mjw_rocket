@@ -44,6 +44,9 @@
     button:hover {
       background-color: rgba(255, 119, 0, 0.8);
     }
+    .ham {
+      display: none;
+    }
     @media(max-width: 650px) {
       button{
         display: none;
@@ -53,6 +56,48 @@
       }
       a img {
         content: url('logo2.png');
+      }
+      .ham {
+      position: relative;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      display: block;
+      }
+      .ham span, .ham span:before, .ham span:after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      background-color: white;
+      display: block;
+      transition: all 0.2s ease;
+      }
+      .ham span {
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      transition: 0.3s
+      }
+      .ham span:before {
+      top: -10px;
+      width: 100%;
+      transition: 0.3s
+      }
+      .ham span:after {
+      bottom: -10px;
+      width: 100%;
+      transition: 0.3s
+      }
+      .ham.active span {
+      background-color: transparent;
+      }
+      .ham.active span:before {
+      top: 0;
+      transform: rotate(45deg);
+      }
+      .ham.active span:after {
+      top: 0;
+      transform: rotate(-45deg);
       }
     }
     </style>
@@ -67,6 +112,18 @@
         </ul>
       </ob>
       <a href="지연베타.html"><button>가장 최근 로켓</button></a>
+      <div class="ham">
+        <span><span>
+      </div>
     </header>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+     </script>
+      <script>
+        $(document).ready(function(){
+          $('.ham').click(function(){
+             $(this).toggleClass('active');
+        });
+        });
+      </script>
   </body>
 </html>
