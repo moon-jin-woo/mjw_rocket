@@ -8,7 +8,7 @@
     <style media="screen">
     a {
       color: white;
-      text-decoration:none;
+      text-decoration: none;
       padding-left, right: 10px;
     }
     header {
@@ -47,8 +47,31 @@
     .ham {
       display: none;
     }
+    .navibox {
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      width: 300px;
+      padding: 0px;
+      background-color: rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    .navibox li {
+      list-style: none;
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+     .navibox.open{
+
+      }
     @media(max-width: 650px) {
-      button{
+      .navibox{
+        display: block;
+      }
+      a button{
         display: none;
       }
       .ob_links{
@@ -115,7 +138,14 @@
       <div class="ham">
         <span><span>
       </div>
-    </header>
+     <div class="navibox">
+       <ul>
+       <li><a href="지연알파.html">G-YEON-a</a></li>
+       <li><a href="지연베타.html">G-YEON-b</a></li>
+       <li><b href="지연베타.html"><button>가장 최근 로켓</button></b></li>
+       </ul>
+     </div>
+   </header>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js">
      </script>
       <script>
