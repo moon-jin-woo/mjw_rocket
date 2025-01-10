@@ -65,13 +65,13 @@
       justify-content: center;
      }
      .navibox.open{
-
+      display: block;
       }
     @media(max-width: 650px) {
       .navibox{
-        display: block;
+        display: none;
       }
-      a button{
+      .combutton{
         display: none;
       }
       .ob_links{
@@ -134,7 +134,9 @@
           <li><a href="지연베타.html">G-YEON-b</a></li>
         </ul>
       </ob>
-      <a href="지연베타.html"><button>가장 최근 로켓</button></a>
+      <div class="combutton">
+        <button onclick="location.href='지연베타.html'">가장 최근 로켓</button>
+      </div>
       <div class="ham">
         <span><span>
       </div>
@@ -142,7 +144,7 @@
        <ul>
        <li><a href="지연알파.html">G-YEON-a</a></li>
        <li><a href="지연베타.html">G-YEON-b</a></li>
-       <li><b href="지연베타.html"><button>가장 최근 로켓</button></b></li>
+       <li><a href="지연베타.html"><button>가장 최근 로켓</button></a></li>
        </ul>
      </div>
    </header>
@@ -152,6 +154,7 @@
         $(document).ready(function(){
           $('.ham').click(function(){
              $(this).toggleClass('active');
+             $('.navibox').toggleClass('open');
         });
         });
       </script>
